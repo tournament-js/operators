@@ -1,0 +1,17 @@
+{
+  "author": "Eirik Albrigtsen <analsandblaster@gmail.com>",
+  "name": "operators",
+  "description": "JavaScript operators as functions",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/clux/operators.git"
+  },
+  "main": "operators.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
