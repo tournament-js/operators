@@ -1,9 +1,9 @@
 # Operators ![travis build status](https://secure.travis-ci.org/clux/operators.png)
-Operators provides the JavaScript operators as functions. It provides a standard quick and
-easy to remember interface for addition, multiplication, concatenation, and-ing, or-ing, as
+Operators provides the JavaScript operators as functions. It provides a standard, short,
+and easy to remember interface for addition, multiplication, concatenation, and-ing, or-ing, as
 well as several two parameter lambdas for non-associative operators, and 1 - 1 curried
-versions of all for quick creation of the functions that you end up writing for `filter` all
-the time.
+versions of all operators for quick creation of the functions that you end up writing for
+`filter` *all the time*.
 
 ## Usage
 Attach it to the short variable of choice:
@@ -26,7 +26,7 @@ It is recommended to get it with the larger utility library:
 [ [1,2], [3,4] ].map($.prepend([0])); // [ [ 0, 1, 2 ], [ 0, 3, 4 ] ]
 ````
 
-Read the [API](https://github.com/clux/operators/blob/master/api.md)
+Read the [API](https://github.com/clux/operators/blob/master/api.md).
 
 ## Installation
 
