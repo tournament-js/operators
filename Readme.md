@@ -1,4 +1,4 @@
-# Interlude ![travis build status](https://secure.travis-ci.org/clux/operators.png)
+# Operators ![travis build status](https://secure.travis-ci.org/clux/operators.png)
 Operators provides the JavaScript operators as functions. It provides a standard quick and
 easy to remember interface for addition, multiplication, concatenation, and-ing, or-ing, as
 well as several two parameter lambdas for non-associative operators, and 1 - 1 curried
