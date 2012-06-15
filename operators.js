@@ -59,12 +59,18 @@ $.prepend2 = function (xs, ys) {
 };
 
 
-// Array versions of 3/6 associative operators's reductions
+// Array versions of 5/6 associative operators's reductions
 $.sum = function (xs) {
   return xs.reduce($.plus2, 0);
 };
 $.product = function (xs) {
   return xs.reduce($.times2, 1);
+};
+$.and = function (xs) {
+  return xs.reduce($.and2, true);
+};
+$.or = function (xs) {
+  return xs.reduce($.or2, false);
 };
 $.flatten = function (xs) {
   return concat.apply([], xs);

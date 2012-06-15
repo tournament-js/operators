@@ -95,7 +95,8 @@ strings.
 ### $.gte(y) :: (x -> x >= y)
 ### $.lte(y) :: (x -> x <= y)
 
-Curried comparison is useful for filters and combinations with $.any / $.all.
+Curried comparison is useful for filters and especially in combinations with
+[interlude](https://github.com/clux/interlude)'s `$.any` / `$.all`.
 
 ````javascript
 [1,4,2,5,2,3].filter($.gt(3)); // [4,5]
@@ -103,20 +104,13 @@ Curried comparison is useful for filters and combinations with $.any / $.all.
 ````
 
 ## Lifted Operators
-The three basic associative operators have been lifted to variadic and array space.
-The _variadic versions_ are named as follows:
-### $.add(x [, y [, ..]])
-### $.multiply(x [, y [, ..]])
-### $.concat(xs [, ys [, ..]])
-````javascript
-$.add(1,2,3); // 6
-$.multiply(1,2,3,4,5); // 120
-$.concat([1,2], [3,4], [5,6]); // [ 1, 2, 3, 4, 5, 6 ]
-````
+Five of the sis basic associative operators have been lifted to variadic and array space.
+The array versions are as follows:
 
-and the array versions:
 ### $.sum(xs) :: Number
 ### $.product(xs) :: Number
+### $.and(xs) :: Boolean
+### $.or(xs) ::: Boolean
 ````javascript
 $.sum([1,2,3]); // 6
 $.product([1,2,3,4,5]); // 120
@@ -129,4 +123,15 @@ Equivalent to reducing the array with `$.append2`, but faster.
 
 ````javascript
 $.flatten([ [1,3,2], [2,[3],2] , [1] ]); // [ 1, 3, 2, 2, [ 3 ], 2, 1 ]
+````
+
+
+Then, the _variadic versions_ (`and` and `or` forgoes the variadic representation):
+### $.add(x [, y [, ..]])
+### $.multiply(x [, y [, ..]])
+### $.concat(xs [, ys [, ..]])
+````javascript
+$.add(1,2,3); // 6
+$.multiply(1,2,3,4,5); // 120
+$.concat([1,2], [3,4], [5,6]); // [ 1, 2, 3, 4, 5, 6 ]
 ````
