@@ -4,7 +4,7 @@ Operators export quick lamdas and certain generalizations for binary operators.
 ## Associative Operators
 These operators satisfy the communtative and associative identities (resp.):
 
-- `a * b == b * c`
+- `a * b == b * a`
 - `a * (b * c) == (a * b) * c`
 
 and as such are often used to slam together a few elements with this operator.
