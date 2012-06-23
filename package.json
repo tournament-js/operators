@@ -7,6 +7,16 @@
     "type": "git",
     "url": "git://github.com/clux/operators.git"
   },
+  "keywords": [
+    "associative",
+    "binary",
+    "curried",
+    "lifted",
+    "operators",
+    "haskell",
+    "FP",
+    "ES5"
+  ],
   "main": "operators.js",
   "scripts": {
     "test": "tap ./test"
