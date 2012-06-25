@@ -28,5 +28,6 @@
   "optionalDependencies": {},
   "engines": {
     "node": "*"
-  }
+  },
+  "license": "MIT"
 }
