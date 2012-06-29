@@ -18,6 +18,8 @@ var $ = require('operators');
 
 [1,2,3,4].map($.plus(1)); // [ 2, 3, 4, 5 ]
 
+[1,2,3,4].map($.pow(2)); // [ 1, 4, 9, 16 ]
+
 [1,2,3,2].filter($.eq(2)); // [ 2, 2 ]
 
 [ [1,2], [3,4] ].map($.prepend([0])); // [ [ 0, 1, 2 ], [ 0, 3, 4 ] ]
@@ -25,10 +27,12 @@ var $ = require('operators');
 
 Read the [API](https://github.com/clux/operators/blob/master/api.md).
 
-Note that it is recommended to get it with one of the following utility libraries it was made for.
+We advocate using this module with one of the utility libraries it was made for:
 
-- [interlude](https://github.com/clux/interlude) the _big_ utility library containing:
-- [autonomy](https://github.com/clux/autonomy) more lightweight utility library
+- [autonomy](https://github.com/clux/autonomy) a super-lightweight utility library
+- [interlude](https://github.com/clux/interlude) a bigger utility library containing autonomy
+
+But of course, these helpers work well on their own.
 
 ## Installation
 

@@ -43,6 +43,9 @@ lambda. First the 2-argument versions:
 ### $.divide2(x, y) :: x / y
 ### $.div2(x, y) :: floor(x/y)
 ### $.mod2(x, y) :: x % y
+### $.pow2(x, y) :: x ^ y
+Note that this function already has a readily available functional representation: `Math.pow`. It is included here simply for completeness.
+### $.log2(x, y) :: log_y(x)
 ### $.eq2(x, y) :: x === y
 ### $.neq2(x, y) :: x !== y
 ### $.gt2(x, y) :: x > y
@@ -56,9 +59,9 @@ $.plus2(2, 3); // 5
 $.or2(false, true); // true
 ````
 
+
 ## Curried Binary operators
-This section is useful for maps, as one of their arguments are curried,
-cutting down the amount of very basic closured lambdas you make.
+This section is useful for maps, as one of their arguments are curried, cutting down the amount of very basic closured lambdas you make.
 
 ### $.plus(y) :: (x -> x + y)
 ### $.minus(y) :: (x -> x - y)
@@ -66,8 +69,25 @@ cutting down the amount of very basic closured lambdas you make.
 ### $.divide(y) :: (x -> x / y)
 ### $.div(y) :: (x -> floor(x/y))
 ### $.mod(y) :: (x -> x % y)
+### $.pow(y) :: (x -> x^y)
+An accessor for `Math.pow`, but with exponent curried.
+
+````javascript
+[1,2,3,4].map($.pow(2)); // [ 1, 4, 9, 16 ]
+````
+
+### $.log(y) :: (x -> log_y(x))
+An accessor for `Math.log`, but currying the base converted to
+(dividing with `Math.log(base)`). `$.logBase(Math.E)` is equivalent to `Math.log`.
+
+````javascript
+[16,8,4,2].map($.logBase(2)); // [ 4, 3, 2, 1 ]
+````
+
 ### $.append(ys) :: (xs -> xs.concat(ys))
 ### $.prepend(ys) :: (xs -> ys.concat(xs))
+
+
 
 ````javascript
 [1,2,3,4,5].map($.plus(1)); // [2, 3, 4, 5, 6]

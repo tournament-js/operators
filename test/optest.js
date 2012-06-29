@@ -42,6 +42,12 @@ test('uncurried basic', function (t) {
   t.equal($.div2(7,2), 3, "7 div 2 === 3");
   t.equal($.mod2(12,5), 2, "12 mod 5 === 2");
 
+  t.equal($.pow2(2, 3), 8, "2^3 === 8");
+  t.equal($.pow2(3, 0), 1, "3^0 === 1");
+  t.equal($.pow2(4, 2), 16, "4^2 === 16");
+  t.equal($.log2(16, 2), 4, "4 is log2 of 16");
+  t.equal($.log2(100, 10), 2, "2 is log10 of 1000");
+
   t.equal($.eq2(1,1), true, "1 === 1");
   t.equal($.eq2(1,"1"), false, "1 === '1'");
   t.equal($.neq2(1,1), false, "!(1 !== 1)");
@@ -64,6 +70,13 @@ test('curried', function (t) {
   t.equal($.divide(2)(6), 3, "6/2 === 3");
   t.equal($.div(2)(7), 3, "7 div 2 === 3");
   t.equal($.mod(5)(11), 1, "11 mod 5 === 1");
+
+  t.equal($.pow(3)(2), 8, "2^3 === 8");
+  t.equal($.pow(0)(3), 1, "3^0 === 1");
+  t.equal($.pow(2)(4), 16, "4^2 === 16");
+  t.equal($.log(2)(16), 4, "4 is log2 of 16");
+  t.equal($.log(10)(100), 2, "2 is log10 of 1000");
+
   t.deepEqual($.append([1,2])([3]), [3,1,2], "(++[1, 2]) [3] === [3, 1, 2]");
   t.deepEqual($.prepend([1,2])([3]), [1,2,3], "([1, 2]++) [3] === [1, 2, 3]");
 

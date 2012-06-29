@@ -108,6 +108,12 @@ $.mod2 = function (x, y) {
   return x % y;
 };
 
+$.pow2 = Math.pow;
+
+$.log2 = function (x, y) {
+  return Math.log(x) / Math.log(y);
+};
+
 $.eq2 = function (x, y) {
   return x === y;
 };
@@ -166,6 +172,18 @@ $.div = function (y) {
 $.mod = function (y) {
   return function (x) {
     return x % y;
+  };
+};
+
+$.pow = function (y) {
+  return function (x) {
+    return Math.pow(x, y);
+  };
+};
+
+$.log = function (y) {
+  return function (x) {
+    return Math.log(x) / Math.log(y);
   };
 };
 
