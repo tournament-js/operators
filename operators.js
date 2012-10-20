@@ -52,8 +52,6 @@ $.append3 = function (xs, ys, zs) {
 $.append4 = function (xs, ys, zs, ws) {
   return xs.concat(ys, zs, ws);
 };
-
-// makes sense to have 3,4 parameter versions of this despite it being associative
 $.prepend2 = function (xs, ys) {
   return ys.concat(xs);
 };
@@ -89,7 +87,6 @@ $.multiply = function () {
 $.concat = function () {
   return concat.apply([], arguments);
 };
-
 
 // non-associative operators only get the 2 argument version
 $.minus2 = function (x, y) {
