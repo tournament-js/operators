@@ -1,5 +1,4 @@
 var $ = {}
-  , reduce = Array.prototype.reduce
   , concat = Array.prototype.concat;
 
 // multi-parameter versions for the associative operators:
@@ -56,34 +55,64 @@ $.prepend2 = function (xs, ys) {
   return ys.concat(xs);
 };
 
-
-// Array versions of 5/6 associative operators's reductions
+// Array versions of 5/6 associative operators by looping rather than reducing ops
+// Associative reductions would make these functions one-liners..
+// I.e. $.product = (xs) -> xs.reduce($.times2, 1)
+// These abstractions are very much not free however, and are thus avoided for now:
+// http://jsperf.com/reduce-vs-slicereduce3
 $.sum = function (xs) {
-  return xs.reduce($.plus2, 0);
+  var sum = 0;
+  for (var i = 0; i < xs.length; i += 1) {
+    sum += xs[i];
+  }
+  return sum;
 };
+
 $.product = function (xs) {
-  return xs.reduce($.times2, 1);
+  var product = 1;
+  for (var i = 0, len = xs.length; i < len; i += 1) {
+    product *= xs[i];
+  }
+  return product;
 };
+
 $.and = function (xs) {
-  return xs.reduce($.and2, true);
+  var and = true;
+  for (var i = 0, len = xs.length; i < len; i += 1) {
+    and = and && xs[i];
+  }
+  return and;
 };
+
 $.or = function (xs) {
-  return xs.reduce($.or2, false);
+  var or = false;
+  for (var i = 0, len = xs.length; i < len; i += 1) {
+    or = or || xs[i];
+  }
+  return or;
 };
+
 $.flatten = function (xs) {
   return concat.apply([], xs);
 };
 
-// Cheapest general associative reductions without looping over arguments manually
-// http://jsperf.com/reduce-vs-slicereduce3 <- the cost of abstractions
-// any/all names more useful for accessors for Array::some/every
-// concat.apply is faster than reducing: http://jsperf.com/concat-via-reduce-or-concat-apply
+// variadic versions
 $.add = function () {
-  return reduce.call(arguments, $.plus2, 0);
+  var sum = 0;
+  for (var i = 0, len = arguments.length; i < len; i += 1) {
+    sum += arguments[i];
+  }
+  return sum;
 };
+
 $.multiply = function () {
-  return reduce.call(arguments, $.times2, 1);
+  var product = 1;
+  for (var i = 0, len = arguments.length; i < len; i += 1) {
+    product *= arguments[i];
+  }
+  return product;
 };
+
 $.concat = function () {
   return concat.apply([], arguments);
 };
