@@ -78,10 +78,10 @@ An accessor for `Math.pow`, but with exponent curried.
 
 ### $.log(y) :: (x -> log_y(x))
 An accessor for `Math.log`, but currying the base converted to
-(dividing with `Math.log(base)`). `$.logBase(Math.E)` is equivalent to `Math.log`.
+(dividing with `Math.log(base)`). `$.log(Math.E)` is equivalent to `Math.log`.
 
 ````javascript
-[16,8,4,2].map($.logBase(2)); // [ 4, 3, 2, 1 ]
+[16,8,4,2].map($.log(2)); // [ 4, 3, 2, 1 ]
 ````
 
 ### $.append(ys) :: (xs -> xs.concat(ys))
