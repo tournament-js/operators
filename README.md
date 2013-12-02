@@ -1,4 +1,7 @@
-# operators [![Build Status](https://secure.travis-ci.org/clux/operators.png)](http://travis-ci.org/clux/operators) [![Dependency Status](https://david-dm.org/clux/operators.png)](https://david-dm.org/clux/operators)
+# Operators
+[![Build Status](https://secure.travis-ci.org/clux/operators.png)](http://travis-ci.org/clux/operators)
+[![Dependency Status](https://david-dm.org/clux/operators.png)](https://david-dm.org/clux/operators)
+[![stable](http://hughsk.github.io/stability-badges/dist/stable.svg)](http://nodejs.org/api/documentation.html#documentation_stability_index)
 
 Operators provides the JavaScript operators as functions. It provides a standard, short,
 and easy to remember interface for addition, multiplication, concatenation, and-ing, or-ing, as
