@@ -11,10 +11,12 @@ exports.basicUncurried = function (t) {
   t.equal($.times3(4,3,2), 24, "4*3*2");
   t.equal($.times4(5,4,3,2), 120, "5*4*3*2");
 
+  t.equal($.and([1,1,1]), 1, "and map true");
   t.equal($.and2(1,1), 1, "1 && 1");
   t.equal($.and3(1,0,1), 0, "1 && 0 && 1");
   t.equal($.and4(1,1,1,1), 1, "1 && 1 && 1 && 1");
 
+  t.equal($.or([0,0,0]), 0, "or map false");
   t.equal($.or2(0,1), 1, "0 || 1");
   t.equal($.or3(0,0,0), 0, "0 || 0 || 0");
   t.equal($.or4(0,0,0,1), 1, "0 || 0 || 0 || 1");
