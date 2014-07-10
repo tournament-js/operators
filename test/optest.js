@@ -1,8 +1,6 @@
-var tap = require('tap')
-  , test = tap.test
-  , $ = require('../');
+var $ = require('../');
 
-test('uncurried basic', function (t) {
+exports.basicUncurried = function (t) {
   t.eql = t.deepEqual;
 
   t.equal($.plus2(2,1), 3, "2+1");
@@ -60,10 +58,10 @@ test('uncurried basic', function (t) {
   t.equal($.gte2(2,3), false, "2 ! >= 3");
   t.equal($.lte2(2,2), true, "2 <= 2");
   t.equal($.lte2(2,1), false, "2 ! <= 1");
-  t.end();
-});
+  t.done();
+};
 
-test('curried', function (t) {
+exports.curried = function (t) {
   t.equal($.plus(3)(2), 5, "2+3 === 5");
   t.equal($.minus(3)(5), 2, "5-3 === 2");
   t.equal($.times(2)(3), 6, "2*3 === 6");
@@ -101,10 +99,10 @@ test('curried', function (t) {
 
   t.equal($.neq(4)(4), false, "!(4 !== 4)");
   t.equal($.neq(4)(5), true, "(4 !== 5)");
-  t.end();
-});
+  t.done();
+};
 
-test('lifted', function (t) {
+exports.lifted = function (t) {
   t.equal($.sum([1,2,3,4]), 10, "sum [1,2,3,4] === 10");
   t.equal($.product([1,2,3,4]), 24, "product [1,2,3,4] === 24");
   t.deepEqual($.flatten([ [1,2,3], [[4]], [5] ]), [1,2,3,[4],5], "$.flatten");
@@ -112,5 +110,5 @@ test('lifted', function (t) {
   t.equal($.add(1,2,3,4), 10, "add(1,2,3,4) === 10");
   t.equal($.multiply(1,2,3,4), 24, "multiply(1,2,3,4) === 24");
   t.deepEqual($.concat([1,2,3], [[4]], [5]), [1,2,3,[4],5], "$.concat");
-  t.end();
-});
+  t.done();
+};

@@ -1,3 +1,7 @@
+0.1.5 / 2014-07-10
+==================
+  * Documentation and coverage report release only
+
 0.1.4 / 2012-10-26
 ==================
   * Efficiency improvements of variadic/array functions by manually looping

@@ -3,6 +3,7 @@
   "name": "operators",
   "description": "JavaScript operators as functions",
   "version": "0.1.3",
+  "stability": "stable",
   "repository": {
     "type": "git",
     "url": "clux/operators"
@@ -17,12 +18,16 @@
     "FP",
     "ES5"
   ],
-  "main": "operators.js",
+  "main": "index.js",
   "scripts": {
-    "test": "tap ./test"
+    "test": "$(npm bin)/nodeunit --reporter=verbose test/*.js",
+    "coveralls": "$(npm bin)/jscoverage lib && OPERATORS_COV=1 $(npm bin)/nodeunit --reporter=lcov test | $(npm bin)/coveralls"
   },
+  "dependencies": {},
   "devDependencies": {
-    "tap": "~0.4.4"
+    "nodeunit": "~0.9.0",
+    "jscoverage": "~0.5.4",
+    "coveralls": "~2.11.1"
   },
   "license": "MIT"
 }
