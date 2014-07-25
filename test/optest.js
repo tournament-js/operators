@@ -1,4 +1,4 @@
-var $ = require('../');
+var $ = require(process.env.OPERATORS_COV ? '../operators-cov.js' : '../');
 
 exports.basicUncurried = function (t) {
   t.eql = t.deepEqual;
