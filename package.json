@@ -2,7 +2,7 @@
   "author": "Eirik Albrigtsen <analsandblaster@gmail.com>",
   "name": "operators",
   "description": "JavaScript operators as functions",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "stability": "stable",
   "repository": {
     "type": "git",
