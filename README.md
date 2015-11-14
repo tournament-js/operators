@@ -3,7 +3,6 @@
 [![build status](https://secure.travis-ci.org/clux/operators.svg)](http://travis-ci.org/clux/operators)
 [![dependency status](https://david-dm.org/clux/operators.svg)](https://david-dm.org/clux/operators)
 [![coverage status](http://img.shields.io/coveralls/clux/operators.svg)](https://coveralls.io/r/clux/operators)
-[![stable](http://img.shields.io/badge/stability-stable-74C614.svg)](http://nodejs.org/api/documentation.html#documentation_stability_index)
 
 Operators provides the JavaScript operators as functions. It provides a standard, short,
 and easy to remember interface for addition, multiplication, concatenation, and-ing, or-ing, as
@@ -38,26 +37,7 @@ We advocate using this module with one of the utility libraries it was made for:
 - [autonomy](https://github.com/clux/autonomy) a super-lightweight utility library
 - [interlude](https://github.com/clux/interlude) a bigger utility library containing autonomy
 
-But they will obviously work well by themselves.
-
-## Installation
-
-```bash
-$ npm install operators
-```
-
-## Running tests
-Install development dependencies
-
-```bash
-$ npm install
-```
-
-Run the tests
-
-```bash
-$ npm test
-```
+That said, they work perfectly by themselves.
 
 ## License
 MIT-Licensed. See LICENSE file for details.
