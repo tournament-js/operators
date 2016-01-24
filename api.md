@@ -144,14 +144,3 @@ Equivalent to reducing the array with `$.append2`, but faster.
 ````javascript
 $.flatten([ [1,3,2], [2,[3],2] , [1] ]); // [ 1, 3, 2, 2, [ 3 ], 2, 1 ]
 ````
-
-
-Then, the _variadic versions_ (`and` and `or` forgoes the variadic representation):
-### $.add(x [, y [, ..]])
-### $.multiply(x [, y [, ..]])
-### $.concat(xs [, ys [, ..]])
-````javascript
-$.add(1,2,3); // 6
-$.multiply(1,2,3,4,5); // 120
-$.concat([1,2], [3,4], [5,6]); // [ 1, 2, 3, 4, 5, 6 ]
-````

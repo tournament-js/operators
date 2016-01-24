@@ -105,8 +105,4 @@ test('lifted', function *(t) {
   t.eq($.sum([1,2,3,4]), 10, 'sum [1,2,3,4] === 10');
   t.eq($.product([1,2,3,4]), 24, 'product [1,2,3,4] === 24');
   t.deepEqual($.flatten([ [1,2,3], [[4]], [5] ]), [1,2,3,[4],5], '$.flatten');
-
-  t.eq($.add(1,2,3,4), 10, 'add(1,2,3,4) === 10');
-  t.eq($.multiply(1,2,3,4), 24, 'multiply(1,2,3,4) === 24');
-  t.deepEqual($.concat([1,2,3], [[4]], [5]), [1,2,3,[4],5], '$.concat');
 });

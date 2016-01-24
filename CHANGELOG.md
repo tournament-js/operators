@@ -1,3 +1,8 @@
+0.2.0 / 2016-XX-XX
+==================
+  * Module rewritten for ES6
+  * Variadic functions (that typically cause deoptimizations) are removed
+
 0.1.7 / 2015-11-15
 ==================
   * Added `.npmignore`

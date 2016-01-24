@@ -28,27 +28,6 @@ $.or = (xs) => xs.reduce((acc, el) => acc || el, false);
 
 $.flatten = (xs) => concat.apply([], xs);
 
-// variadic versions - may cause deoptimizations
-$.add = function () {
-  var sum = 0;
-  for (var i = 0, len = arguments.length; i < len; i += 1) {
-    sum += arguments[i];
-  }
-  return sum;
-};
-
-$.multiply = function () {
-  var product = 1;
-  for (var i = 0, len = arguments.length; i < len; i += 1) {
-    product *= arguments[i];
-  }
-  return product;
-};
-
-$.concat = function () {
-  return concat.apply([], arguments);
-};
-
 // non-associative operators only get the 2 argument version
 $.minus2 = (x, y) => x - y;
 $.divide2 = (x, y) => x / y;
