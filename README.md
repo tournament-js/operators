@@ -10,6 +10,8 @@ well as several two parameter lambdas for non-associative operators, and curried
 versions of the binary operators for quick creation of the functions that you end up writing for
 `filter` *all the time*.
 
+Note that since ES6, this module is less relevant as typing these things up yourself is now acceptably short. That said, module remains. Newer versions will be ES6 only.
+
 ## Usage
 Attach it to the short variable of choice:
 
