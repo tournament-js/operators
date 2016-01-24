@@ -1,5 +1,4 @@
-var $ = {}
-  , concat = Array.prototype.concat;
+var $ = {};
 
 // multi-parameter versions for the associative operators
 $.plus2 = (x, y) => x + y;
@@ -25,8 +24,7 @@ $.sum = (xs) => xs.reduce((acc, el) => acc + el, 0);
 $.product = (xs) => xs.reduce((acc, el) => acc * el, 1);
 $.and = (xs) => xs.reduce((acc, el) => acc && el, true);
 $.or = (xs) => xs.reduce((acc, el) => acc || el, false);
-
-$.flatten = (xs) => concat.apply([], xs);
+$.flatten = (xs) => Array.prototype.concat.apply([], xs);
 
 // non-associative operators only get the 2 argument version
 $.minus2 = (x, y) => x - y;
@@ -34,7 +32,6 @@ $.divide2 = (x, y) => x / y;
 $.div2 = (x, y) => Math.floor(x / y);
 $.mod2 = (x, y) => x % y;
 $.pow2 = Math.pow;
-
 $.log2 = (x, y) => Math.log(x) / Math.log(y);
 $.eq2 = (x, y) => x === y;
 $.neq2 = (x, y) => x !== y;
