@@ -15,7 +15,7 @@
     "operators",
     "haskell",
     "FP",
-    "ES5"
+    "ES6"
   ],
   "main": "operators.js",
   "scripts": {
