@@ -1,7 +1,7 @@
-0.2.0 / 2016-XX-XX
+1.0.0 / 2016-01-27
 ==================
   * Module rewritten for ES6
-  * Variadic functions (that typically cause deoptimizations) are removed
+  * Variadic functions are removed (`add` + `multiply` + `concat`)
 
 0.1.7 / 2015-11-15
 ==================
