@@ -13,6 +13,7 @@ Use it with qualified imports with the yet unfinished module `import` syntax or 
 
 ```js
 import { gt, plus, pow, eq, prepend } from 'operators'
+
 [1,3,2,6,5,4].filter(gt(4));
 // [ 6, 5 ]
 
