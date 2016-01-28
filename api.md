@@ -74,15 +74,15 @@ An accessor for `Math.pow`, but with exponent curried.
 [1,2,3,4].map(pow(2)); // [ 1, 4, 9, 16 ]
 ```
 
-### log(y) :: (x -> log_y(x))
+### log(y) :: (x) -> log_y(x)
 An accessor for `Math.log`, but currying the base converted to (dividing with `Math.log(base)`). `log(Math.E)` is equivalent to `Math.log`.
 
 ```js
 [16,8,4,2].map(log(2)); // [ 4, 3, 2, 1 ]
 ```
 
-### append(ys) :: (xs) => xs.concat(ys)
-### prepend(ys) :: (xs) => ys.concat(xs)
+### append(ys) :: (xs) -> xs.concat(ys)
+### prepend(ys) :: (xs) -> ys.concat(xs)
 
 ```js
 [1,2,3,4,5].map(plus(1)); // [2, 3, 4, 5, 6]
@@ -103,12 +103,12 @@ strings.
 ["hello", "hi"].map(prepend("world")); // ["worldhello", "worldhi"]
 ```
 
-### gt(y) :: (x) => x > y
-### lt(y) :: (x) => x < y
-### eq(y) :: (x) => x === y
-### neq(y) :: (x) => x !== y
-### gte(y) :: (x) => x >= y
-### lte(y) :: (x) => x <= y
+### gt(y) :: (x) -> x > y
+### lt(y) :: (x) -> x < y
+### eq(y) :: (x) -> x === y
+### neq(y) :: (x) -> x !== y
+### gte(y) :: (x) -> x >= y
+### lte(y) :: (x) -> x <= y
 
 Curried comparison is useful for filters and especially in combinations with
 [interlude](https://github.com/clux/interlude)'s `any` / `all`.
